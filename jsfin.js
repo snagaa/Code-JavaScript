@@ -165,7 +165,6 @@ window.onload = function(){
 			ramasse_cle4 = true;
 			clees_recuperes ++;
 			pick.play();
-			pick4.play();
 		}
 		
         /***** Les fonctions de dessin ********/
@@ -203,6 +202,7 @@ window.onload = function(){
 			ctx.drawImage(clee,2300-sol_pierre_x,300,30,30)
 		}
 			if (clees_recuperes >=4 && armure_recuperee >=1) {
+				pick4.play();
 			if (ramasse_porte==false && telep==false) {
 				ctx.drawImage(porte,1922-sol_pierre_x,175,260,250);
 			}
