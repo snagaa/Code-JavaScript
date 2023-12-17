@@ -20,7 +20,9 @@ window.onload = function(){
 	var score = new Image ();
 	var porte = new Image ();
 	var porte_seule = new Image ();
+
 	// Chargement de l'image
+	
 	sol_pierre.src = "Images/PLAN1_FAUDRY.png";
 	premier_plan.src = "Images/PLAN2_FAUDRY.png";
 	arriere_plan.src = "Images/PLAN3_FAUDRY.png";
@@ -70,7 +72,6 @@ window.onload = function(){
 	arriere_plan.onload = function(){
 		setInterval(boucle,20); //FPS : 1000/20
 	}
-
 	function boucle(){
 		/***** on positionne les variables ****/
 		//theta = theta +0.2;
@@ -131,7 +132,6 @@ window.onload = function(){
 		    //y=y+5 par ex pour une gravité à vitesse constante
 		    gravite = true;
 		}
-		
 		if (pas>=9)
 			pas=0;
 
@@ -168,6 +168,7 @@ window.onload = function(){
 		}
 		
         /***** Les fonctions de dessin ********/
+
 		ctx.save();
 			if (telep==false) { 
 			ctx.drawImage(arriere_plan,arriere_plan_x,0,600,400,0,0,600,400);
@@ -176,9 +177,7 @@ window.onload = function(){
 			ctx.drawImage(premier_plan,premier_plan_x,0,600,400,0,0,600,400);
 			ctx.drawImage(porte_seule,1922-sol_pierre_x,175,260,250);
 			ctx.drawImage(sol_pierre,sol_pierre_x,0,600,400,0,0,600,400);
-			
 		}
-			
 			ctx.font = "14px Silkscreen"
 			ctx.fillText("Clés: " + clees_recuperes, 40, 32);
 			ctx.fillText("Armure: " + armure_recuperee, 29, 72);
